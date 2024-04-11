@@ -20,17 +20,13 @@ currentsimplex.txt
 contour.png
 boxscript.sh
 boxoutput.log
-boxfitsettings.txt
 boxfitmod.cpp
 boxfitmod
 boxfit.h
 boxfit.cpp
-FitterClass.py
-FluxGeneratorClass.py
 grb990510data.txt
 GW170817_3GHz_VLAobs.txt
 GW170817.csv
-InterpolatorClass.py
 jetfit_lightcurve.txt
 light_curves.png
 lightcurve_comp.png
@@ -50,7 +46,6 @@ spectrum_aft.txt
 spectrum_comp.png
 spectrum.txt
 tricode.ipynb
-Table.h5
 tricode.py
 __pycache__/FitterClass.cpython-312.pyc
 __pycache__/FluxGeneratorClass.cpython-312.pyc
@@ -112,3 +107,8 @@ desktop-tutorial
 DeepGlow-main/.gitignore
 DeepGlow-main/example.py
 DeepGlow-main/paper/boxfit_clrDLtrain_wind.py
+DeepGlow-main/paper/CLR
+examples/Table.h5
+examples/InterpolatorClass.py
+examples/FluxGeneratorClass.py
+examples/FitterClass.py
