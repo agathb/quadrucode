@@ -75,8 +75,8 @@
 !-------------------------------------------------------------------------------
 ! resolution related
 
-  eds_r_res = 100 ! number of rays in EDS r direction
-  eds_phi_res = 100  ! number of rays in EDS phi direction
+  eds_r_res = 250 ! number of rays in EDS r direction
+  eds_phi_res = 500  ! number of rays in EDS phi direction
   fluid_res = 500 ! How many time 'snapshots' are used. Sum total for both
                    ! BOX based snapshots and BM based snapshots (if any)
   jet = forward       ! Which jets to compute, use forward, both or receding
