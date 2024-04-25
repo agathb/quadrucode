@@ -19,3 +19,32 @@ Described in [Yiyang Wu and Andrew MacFadyen. Constraining the outflow structure
 ## JetSimpy
 
 Described in [Hao Wang, Ranadeep G. Dastidar, Dimitrios Giannios, and Paul C. Duffell. jetsimpy:A highly efficient hydrodynamic code for gamma-ray burst afterglow, 2024](https://arxiv.org/html/2402.19359v1) and available on github [here](https://github.com/haowang-astro/jetsimpy).
+
+## Input and units for each model
+
+This table accounts for the input of each model and their units. The (.) account for the input variables with its unit next to it when there is one. 
+
+| Input Parameter | BoxFit | Afterglowpy | JetFit | JetSimpy |
+|:--------:|:--------:|:--------:| :--------:| :--------:|
+|  $\theta_{obs}$   | . rad   | . rad  |   | . rad  |
+|  $\theta_{j}$    | . rad   |  . rad  |   | . rad  |
+|  $\theta_{wing}$    |    |  rad   |   |  |
+|  $n$    | . $cm^{-3}$   | . $cm^{-3}$   | . $cm^{-3}$/1 $cm^{-3}$  | . $cm^{-3}$   |
+|  $p$    |  .  |  .   | .   | .  |
+|  $E$   |     |     | . erg / 10^50   |    |
+|  $E_{iso}$   |  . erg   | . erg   |   | . erg   |
+|  $\eta_0$   |     |    | .   |    |
+|  $\gamma_B$    |     |    | .   |    |
+|  $\Gamma$    |     |    |    | .  |
+|  $\epsilon_B$   |  .  |  .   | .   | .  |
+|  $\epsilon_E$   |  .   |  .  | .  | .  |
+|  $\xi_N$   |  .  |  .   | .   |   |
+|  $d_L$   |  cm   |  cm   | cm  | Mpc   |
+|  $z$   |  .  |  .   | .   | .  |
+|  $b$   |    |  .   |   | .  |
+
+# Generating lightcurves
+
+The parameter file from BoxFit called 'boxfitsettings.txt' has all the parameters 
+
+Once all the models are installed, and the relevant files for each model are all in the same directory, the Jupyter notebook can run  and generate a single plot with evey model. A table of the input parameters 
