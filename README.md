@@ -22,7 +22,8 @@ Described in [Hao Wang, Ranadeep G. Dastidar, Dimitrios Giannios, and Paul C. Du
 
 ## Input and units for each model
 
-This table accounts for the input of each model and their units. The (.) account for the input variables with its unit next to it when there is one. 
+This table accounts for the input of each model and their units. 
+(.) accounts for the input variables with its unit and a blank space indicates that it's not taken as an input. 
 
 | Input Parameter | BoxFit | Afterglowpy | JetFit | JetSimpy |
 |:--------:|:--------:|:--------:| :--------:| :--------:|
@@ -45,6 +46,6 @@ This table accounts for the input of each model and their units. The (.) account
 
 # Generating lightcurves
 
-The parameter file from BoxFit called 'boxfitsettings.txt' has all the parameters 
+The parameter file from BoxFit called 'boxfitsettings.txt' contains all the parameters and the code will ensure that the other models take the right input based of this boxfit file. However, the specific internal energy $\eta_0$ and the boost lorentz factor $\gamma_B$ from JetFit can be changed directly in the code in the JetFit section. It will affect JetSimpy as well because of the lorentz factor $\Gamma \approx$ 2$\eta_0$ $\gamma_B$
 
 Once all the models are installed, and the relevant files for each model are all in the same directory, the Jupyter notebook can run  and generate a single plot with evey model. A table of the input parameters 
