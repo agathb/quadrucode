@@ -20,7 +20,7 @@ Described in [Yiyang Wu and Andrew MacFadyen. Constraining the outflow structure
 
 Described in [Hao Wang, Ranadeep G. Dastidar, Dimitrios Giannios, and Paul C. Duffell. jetsimpy:A highly efficient hydrodynamic code for gamma-ray burst afterglow, 2024](https://arxiv.org/html/2402.19359v1) and available on github [here](https://github.com/haowang-astro/jetsimpy).
 
-## Order
+## Files
 
 Once all the models are installed, the relevant files for each model must all be in the same directory, namely: `FitterClass.py, InterpolatorClass.py, FluxGeneratorClass.py` and `Table.h5` for JetFit and the event data for plotting. (see JetSimpy also)
 The path for the output of the BoxFit must be specified at the beginning of the code to make sure the code can read `boxfitsettings.txt` `lightcurve.txt` and 'spectrum.txt'
