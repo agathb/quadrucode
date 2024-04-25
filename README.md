@@ -5,7 +5,7 @@ This project uses four models to generate a plot of the lightcurve for specified
 
 Described in [Hendrik van Eerten, Alexander van der Horst, and Andrew MacFadyen. Gamma-ray burst afterglow broadband fitting based directly on hydrodynamics simulations. The Astrophysical Journal, 749(1):44, mar 2012.](https://arxiv.org/abs/1110.5089), and can be downloaded [here](https://cosmo.nyu.edu/afterglowlibrary/boxfit2011.html) as well as the box files. 
 For the installation, it is recommended to follow the [user guide](https://cosmo.nyu.edu/afterglowlibrary/boxfitdatav2/boxfitguidev2.pdf) made by the author. 
-Once it is installed and running, the outputdirectory (hereafter called 'boxfitoutput') should contain the following three files: 'boxfitsettings.txt' where the parameters are specified, `lightcurve.txt` the output data of boxfit when it is asked to generate a lightcurve, 'spectrum.txt' the equivalent for a spectrum.
+Once it is installed and running, the outputdirectory (hereafter called 'boxfitoutput') should contain the following three files: 'boxfitsettings.txt' where the parameters are specified, `lightcurve.txt` the output data of boxfit when it is asked to generate a lightcurve, `spectrum.txt` the equivalent for a spectrum.
 
 ## Afterglowpy
 
@@ -22,8 +22,8 @@ Described in [Hao Wang, Ranadeep G. Dastidar, Dimitrios Giannios, and Paul C. Du
 
 ## Order
 
-Once all the models are installed, the relevant files for each model must all be in the same directory, namely: 'FitterClass.py, InterpolatorClass.py, FluxGeneratorClass.py' and 'Table.h5' for JetFit and the event data for plotting. (see JetSimpy also)
-The path for the output of the BoxFit must be specified at the beginning of the code to make sure the code can read 'boxfitsettings.txt, lightcurve.txt' and 'spectrum.txt'
+Once all the models are installed, the relevant files for each model must all be in the same directory, namely: `FitterClass.py, InterpolatorClass.py, FluxGeneratorClass.py` and `Table.h5` for JetFit and the event data for plotting. (see JetSimpy also)
+The path for the output of the BoxFit must be specified at the beginning of the code to make sure the code can read `boxfitsettings.txt` `lightcurve.txt` and 'spectrum.txt'
 
 ## Input and units for each model
 
@@ -53,4 +53,12 @@ This table accounts for the input of each model and their units.
 
 The parameter file from BoxFit called 'boxfitsettings.txt' contains all the parameters and the code will ensure that the other models take the right input in its designated unit based of this boxfit file. However, the specific internal energy $\eta_0$ and the boost lorentz factor $\gamma_B$ from JetFit can be changed directly in the code in the JetFit section. It will affect JetSimpy as well because it relies on the lorentz factor $\Gamma \approx$ 2 $\eta_0 \gamma_B$
 
-, the Jupyter notebook can run  and generate a single plot with evey model. A table of the input parameters 
+Once BoxFit is executed with the desired parameters, the Jupyter notebook can take over and plot all four lightcurves in one plot. 
+
+# Caveats
+
+## JetFit
+
+The specified time in the BoxFit parameter file can cause the scaled time $\tau$ from JetFit to be out of bounds and produce an array of Nans as the output Flux. To avoid this isue, the function `range_time_tau` calculates the time range allowed by the bounds of $\tau$ and throws a warning if the selected time frame is not suitable for JetFit.
+
+The kernel must restart if the section JetFit has already run. Otherwise, the flux value turn into Nans. 
