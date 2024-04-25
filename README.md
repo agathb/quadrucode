@@ -14,4 +14,8 @@ The installation is straightforward by using pip as described in its github page
 
 ## JetFit
 
-Described in 
+
+
+## JetSimpy
+
+Described in [Hao Wang, Ranadeep G. Dastidar, Dimitrios Giannios, and Paul C. Duffell. jetsimpy:A highly efficient hydrodynamic code for gamma-ray burst afterglow, 2024](https://arxiv.org/html/2402.19359v1) and available on github [here](https://github.com/haowang-astro/jetsimpy).
