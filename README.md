@@ -20,6 +20,11 @@ Described in [Yiyang Wu and Andrew MacFadyen. Constraining the outflow structure
 
 Described in [Hao Wang, Ranadeep G. Dastidar, Dimitrios Giannios, and Paul C. Duffell. jetsimpy:A highly efficient hydrodynamic code for gamma-ray burst afterglow, 2024](https://arxiv.org/html/2402.19359v1) and available on github [here](https://github.com/haowang-astro/jetsimpy).
 
+## Order
+
+Once all the models are installed, the relevant files for each model must all be in the same directory, namely: 'FitterClass.py, InterpolatorClass.py, FluxGeneratorClass.py' and 'Table.h5' for JetFit and the event data for plotting. (see JetSimpy also)
+The path for the output of the BoxFit must be specified at the beginning of the code to make sure the code can read 'boxfitsettings.txt, lightcurve.txt' and 'spectrum.txt'
+
 ## Input and units for each model
 
 This table accounts for the input of each model and their units. 
@@ -46,6 +51,6 @@ This table accounts for the input of each model and their units.
 
 # Generating lightcurves
 
-The parameter file from BoxFit called 'boxfitsettings.txt' contains all the parameters and the code will ensure that the other models take the right input based of this boxfit file. However, the specific internal energy $\eta_0$ and the boost lorentz factor $\gamma_B$ from JetFit can be changed directly in the code in the JetFit section. It will affect JetSimpy as well because of the lorentz factor $\Gamma \approx$ 2$\eta_0$ $\gamma_B$
+The parameter file from BoxFit called 'boxfitsettings.txt' contains all the parameters and the code will ensure that the other models take the right input in its designated unit based of this boxfit file. However, the specific internal energy $\eta_0$ and the boost lorentz factor $\gamma_B$ from JetFit can be changed directly in the code in the JetFit section. It will affect JetSimpy as well because it relies on the lorentz factor $\Gamma \approx$ 2 $\eta_0 \gamma_B$
 
-Once all the models are installed, and the relevant files for each model are all in the same directory, the Jupyter notebook can run  and generate a single plot with evey model. A table of the input parameters 
+, the Jupyter notebook can run  and generate a single plot with evey model. A table of the input parameters 
