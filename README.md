@@ -8,3 +8,10 @@ For the installation, it is recommended to follow the [user guide](https://cosmo
 Once it is installed and running, the outputdirectory (hereafter called 'boxfitoutput') should contain the following three files: 'boxfitsettings.txt' where the parameters are specified, 'lightcurve.txt' the output data of boxfit when it is asked to generate a lightcurve, 'spectrum.txt' the equivalent for a spectrum.
 
 ## Afterglowpy
+
+Described in [Ryan, G., van Eerten, H., Piro, L. and Troja, E., 2020, Astrophysical Journal 896, 166 (2020)](https://arxiv.org/abs/1909.11691) and available on github [here](https://github.com/geoffryan/afterglowpy?tab=readme-ov-file).
+The installation is straightforward by using pip as described in its github page. 
+
+## JetFit
+
+Described in 
