@@ -1,4 +1,4 @@
-This project uses four models to generate a plot of the lightcurve for specified parameers. The aim is to understand the dependencies of each model and compare them.
+This project uses four models to generate a plot of the afterglow lightcurve for specified parameers. The aim is to understand the dependencies of each model and compare them.
 
 # Models
 ## BoxFit
