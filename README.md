@@ -15,6 +15,7 @@ The installation is straightforward by using pip as described in its github page
 ## JetFit
 
 Described in [Yiyang Wu and Andrew MacFadyen. Constraining the outflow structure of the binary neutron star merger event gw170817/grb170817a with a markov chain monte carlo analysis. The Astrophysical Journal, 869(1):55, December 2018](https://arxiv.org/abs/1809.06843) and the github is [here](https://github.com/NYU-CAL/JetFit), which can be set up in a conda environment.
+[//]: <> beware i think maybe this is the jetfit first paper https://arxiv.org/abs/1308.1731
 
 ## JetSimpy
 
