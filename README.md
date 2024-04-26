@@ -34,7 +34,7 @@ This table accounts for the input of each model and their units.
 |:--------:|:--------:|:--------:| :--------:| :--------:|
 |  $\theta_{obs}$   | . rad   | . rad  |   | . rad  |
 |  $\theta_{j}$    | . rad   |  . rad  |   | . rad  |
-|  $\theta_{wing}$    |    |  rad   |   |  |
+|  $\theta_{wing}$    |    | . rad   |   |  |
 |  $n$    | . $cm^{-3}$   | . $cm^{-3}$   | . $cm^{-3}$/1 $cm^{-3}$  | . $cm^{-3}$   |
 |  $p$    |  .  |  .   | .   | .  |
 |  $E$   |     |     | . erg / 10^50   |    |
