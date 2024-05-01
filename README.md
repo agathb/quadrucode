@@ -52,9 +52,13 @@ This table accounts for the input of each model and their units.
 
 ## Comparing the models
 
+TH: Top-Hat E($\theta$) = E_0 for $\theta$ < $\theta_j$ \label{eq1}
+G: Gaussian E($\theta$) = E_0 exp( - \frac{$\theta$**2}{2 $\theta_c$**2}) \label{eq2}
+PL: Power Law E($\theta$) = E_0 ( 1 + \frac{$\theta$**2}{b $\theta_c$**2} )**-b/2 \label{eq3}
+
 |  | BoxFit | Afterglowpy | JetFit | JetSimpy |
 |:--------:|:--------:|:--------:| :--------:| :--------:|
-| Jet Structure   |  TH  | TH, G, PL, Spherical  | Not specified  | Specify formula |
+| Jet Structure   |  \ref{eq1}  | TH, G, PL, Spherical  | Not specified  | Specify formula |
 | Energy per solid angle |  TH  | TH, G, PL, Spherical  | Not specified  | Specify formula |
 | Approximations |  conic section of the full spherical solution truncated at fixed opening angle  | thin blast shell  | Not specified  | 2D thin blast shell |
 | Scaling relations|  TH  | thin blast shell  | Not specified  | 2D thin blast shell |
