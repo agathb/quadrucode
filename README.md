@@ -66,7 +66,9 @@ This table accounts for the input of each model and their units.
 | Model Fitting  | Deprecated  |  Yes  | Yes  | Yes  |
 | Synchrotron Self- Absorption | Yes  |  No  | No  | No  |
 | Electron Cooling | Yes  |  No  | No  | No  |
-| Inverse Compton | No |  No  | No  | No  |
+| Inverse Compton | ? |  No  | No  | No  |
+| $\theta_0$ range | [0.045, 0.5] rad |    | No  | No  |
+| $\theta_obs$ range | [0, 1.57] rad |    | No  | No  |
 
 
 # Generating lightcurves
