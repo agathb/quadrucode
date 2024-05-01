@@ -50,6 +50,14 @@ This table accounts for the input of each model and their units.
 |  $z$   |  .  |  .   | .   | .  |
 |  $b$   |    |  .   |   | .  |
 
+## Comparing the models
+
+|  | BoxFit | Afterglowpy | JetFit | JetSimpy |
+|:--------:|:--------:|:--------:| :--------:| :--------:|
+| Jet Structure   |  TH  | TH, G, PL, Spherical  | Not specified  | Specify formula |
+| Model Fitting  | Deprecated  |  Yes  | Yes  | Yes  |
+| Synchrotron Self- Absorption | Yes  |  No  | No  | No  |
+
 # Generating lightcurves
 
 The parameter file from BoxFit called 'boxfitsettings.txt' contains all the parameters and the code will ensure that the other models take the right input in its designated unit based of this boxfit file. However, the specific internal energy $\eta_0$ and the boost lorentz factor $\gamma_B$ from JetFit can be changed directly in the code in the JetFit section. It will affect JetSimpy as well because it relies on the lorentz factor $\Gamma \approx$ 2 $\eta_0 \gamma_B$
