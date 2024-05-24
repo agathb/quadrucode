@@ -15,6 +15,7 @@ The installation is straightforward by using pip as described in its github page
 ## JetFit
 
 Described in [Yiyang Wu and Andrew MacFadyen. Constraining the outflow structure of the binary neutron star merger event gw170817/grb170817a with a markov chain monte carlo analysis. The Astrophysical Journal, 869(1):55, December 2018](https://arxiv.org/abs/1809.06843) and the github is [here](https://github.com/NYU-CAL/JetFit), which can be set up in a conda environment.
+[//]: <> beware i think maybe this is the jetfit first paper https://arxiv.org/abs/1308.1731
 
 ## JetSimpy
 
@@ -48,6 +49,33 @@ This table accounts for the input of each model and their units.
 |  $d_L$   |  cm   |  cm   | cm  | Mpc   |
 |  $z$   |  .  |  .   | .   | .  |
 |  $b$   |    |  .   |   | .  |
+
+## Comparing the models
+
+TH: Top-Hat \begin{equation} 
+E($\theta$) = E_0 for $\theta$ < $\theta_j$
+\end{equation}
+G: Gaussian $E$($\theta$) = $E_0$ $\exp( - \frac{$\theta$**2}{2 $\theta_c$**2})$ $\label{eq2}$
+PL: Power Law $E$($\theta$) = $E_0$ $( 1 + \frac{$\theta$**2}{b $\theta_c$**2} )**-b/2$ $\label{eq3}$
+
+|  | BoxFit | Afterglowpy | JetFit | JetSimpy |
+|:--------:|:--------:|:--------:| :--------:| :--------:|
+| Jet Structure   |  $\ref{eq1}$  | TH, G, PL, Spherical  | Not specified  | Specify formula |
+| Energy per solid angle |  TH  | TH, G, PL, Spherical  | Not specified  | Specify formula |
+| Approximations |  conic section of the full spherical solution truncated at fixed opening angle  | thin blast shell  | Not specified  | 2D thin blast shell |
+| Scaling relations|  TH  | thin blast shell  | Not specified  | 2D thin blast shell |
+| Box entries|  TH  | thin blast shell  | Not specified  | 2D thin blast shell |
+| Method|  numerical synchrotron radiation calculation: solving the linear radiative transfer equations including synch slef absorb  | thin blast shell  | Not specified  | 2D thin blast shell |
+| ?|  linear interpolation of fluid profiles between different emisson times  | thin blast shell  | Not specified  | 2D thin blast shell |
+| dominant radiaton mechanism|  synchrotron radiation  | thin blast shell  | Not specified  | 2D thin blast shell |
+| Jet Spreading | Yes |  No  | No  | No  |
+| Model Fitting  | Deprecated  |  Yes  | Yes  | Yes  |
+| Synchrotron Self- Absorption | Yes  |  No  | No  | No  |
+| Electron Cooling | Yes  |  No  | No  | No  |
+| Inverse Compton | ? |  No  | No  | No  |
+| $\theta_0$ range | [0.045, 0.5] rad |    | No  | No  |
+| $\theta_obs$ range | [0, 1.57] rad |    | No  | No  |
+
 
 # Generating lightcurves
 
