@@ -56,7 +56,7 @@ nu_1 = 1e+21 ! Highest frequency for spectrum (Hz)
 t_0 = 170000.0 ! Earliest time for light curve, time for spectrum (s)
 t_1 = 95000000.0 ! Latest time for light curve (s)
 
-no_points = 4 ! how many data points in the light curve / spectrum
+no_points = 100 ! how many data points in the light curve / spectrum
   
 !-------------------------------------------------------------------------------
 ! non-fit parameter settings
