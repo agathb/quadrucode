@@ -122,8 +122,4 @@ jetsimpy.egg-info/dependency_links.txt
 jetsimpy/__pycache__/autorefine.cpython-312.pyc
 build/temp.linux-x86_64-cpython-312/jetsimpy/src/binding.o
 build/lib.linux-x86_64-cpython-312/jetsimpy/src/binding.cpp
-<<<<<<< HEAD
 jetsimpy/quadrucodev2.ipynb	
-=======
-jetsimpy/quadrucodev2.ipynb
->>>>>>> 4cf34cb053d987d9725d344d969c11531786f36e

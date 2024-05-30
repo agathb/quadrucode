@@ -67,7 +67,7 @@ z = 0.00973 ! cosmic redshift
 !-------------------------------------------------------------------------------
 ! radiation mechanism related
 
-  self_absorption = 1   ! use synchrotron self-absorption
+self_absorption = 1 ! use synchrotron self-absorption
   electron_cooling = 1  ! use electron cooling
   include_box = 1       ! include box fluid states
   include_BM = 1        ! include early time Blandford-McKee fluid states
@@ -75,11 +75,11 @@ z = 0.00973 ! cosmic redshift
 !-------------------------------------------------------------------------------
 ! resolution related
 
-eds_r_res = 100 ! number of rays in EDS r direction
+eds_r_res = 500 ! number of rays in EDS r direction
 eds_phi_res = 30 ! number of rays in EDS phi direction
-fluid_res = 100 ! How many time 'snapshots' are used. Sum total for both
+fluid_res = 500 ! How many time 'snapshots' are used. Sum total for both
                    ! BOX based snapshots and BM based snapshots (if any)
-  jet = forward       ! Which jets to compute, use forward, both or receding
+jet = forward ! Which jets to compute, use forward, both or receding
 
   BM_start = 300.0 ! Starting fluid Lorentz factor for BM solution
   BM_stop = -1     ! Stopping fluid Lorentz factor for BM. If < 0, use box value
