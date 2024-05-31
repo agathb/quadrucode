@@ -52,7 +52,7 @@ This table accounts for the input of each model and their units.
 
 # Generating lightcurves
 
-The dictionary D must be specified with the desired values at the beggining of the code: it contains all the parameters and the code will ensure that the other models take the right input in its designated unit based on this dictionary. 
+The dictionary D must be specified with the desired values at the beginning of the code: it contains all the parameters and the code will ensure that the other models take the right input in its designated unit based on this dictionary. 
 The code will require user input for BoxFit. Indeed, the user can either run the BoxFit code within the Jupyter notebook (1) or choose to read BoxFit's output file if the code already ran (2), in which case the user will have to put its own 'lightcurve.txt' file in the 'boxfitcode' folder. 
 
 # Warnings
