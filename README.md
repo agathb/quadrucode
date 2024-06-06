@@ -29,25 +29,46 @@ Once all the models are installed, the relevant files for each model will alread
 This table accounts for the input of each model and their units. 
 (.) accounts for the input variables with its unit and a blank space indicates that it's not taken as an input. 
 
-| Input Parameter | BoxFit | Afterglowpy | JetFit | JetSimpy |
-|:--------:|:--------:|:--------:| :--------:| :--------:|
-|  $\theta_{obs}$   | . rad   | . rad  |   | . rad  |
-|  $\theta_{j}$    | . rad   |  . rad  |   | . rad  |
-|  $\theta_{wing}$    |    | . rad   |   |  |
-|  $n$    | . $cm^{-3}$   | . $cm^{-3}$   | . $cm^{-3}$/1 $cm^{-3}$  | . $cm^{-3}$   |
-|  $p$    |  .  |  .   | .   | .  |
-|  $E$   |     |     | . erg / 10^50   |    |
-|  $E_{iso}$   |  . erg   | . erg   |   | . erg   |
-|  $\eta_0$   |     |    | .   |    |
-|  $\gamma_B$    |     |    | .   |    |
-|  $\Gamma$    |     |    |    | .  |
-|  $\epsilon_B$   |  .  |  .   | .   | .  |
-|  $\epsilon_E$   |  .   |  .  | .  | .  |
-|  $\xi_N$   |  .  |  .   | .   |   |
-|  $d_L$   |  cm   |  cm   | cm  | Mpc   |
-|  $z$   |  .  |  .   | .   | .  |
-|  $b$   |    |  .   |   | .  |
+| Input Parameter | **BoxFit** | **Afterglowpy** | **JetFit** | **JetSimpy** |
+|-----------------|------------|-----------------|------------|--------------|
+| $\theta_{obs}$  | . rad      | . rad           |            | . rad        |
+| $\theta_{j}$    | . rad      | . rad           |            | . rad        |
+| $\theta_{wing}$ |            | . rad           |            |              |
+| $n$             | . $cm^{-3}$| . $cm^{-3}$     | . $cm^{-3}$/1 $cm^{-3}$ | . $cm^{-3}$ |
+| $p$             | .          | .               | .          | .            |
+| $E$             |            |                 | . erg / 10^50|             |
+| $E_{iso}$       | . erg      | . erg           |            | . erg        |
+| $\eta_0$        |            |                 | .          |              |
+| $\gamma_B$      |            |                 | .          |              |
+| $\Gamma$        |            |                 |            | .            |
+| $\epsilon_B$    | .          | .               | .          | .            |
+| $\epsilon_E$    | .          | .               | .          | .            |
+| $\xi_N$         | .          | .               | .          |              |
+| $d_L$           | cm         | cm              | cm         | Mpc          |
+| $z$             | .          | .               | .          | .            |
+| $b$             |            | .               |            | .            |
 
+*Table 1: Input Parameters for Models*
+
+
+## Comparison of the models
+
+|                              | **BoxFit**                                          | **Afterglowpy**                                                     | **JetFit**                                       | **JetSimpy**                                                        |
+|------------------------------|-----------------------------------------------------|---------------------------------------------------------------------|-------------------------------------------------|--------------------------------------------------------------------|
+| **Jet Structure**            | TH                                                  | TH, G, PL, Spherical                                                | Not specified                                   | TH, G, PL                                                          |
+| **Numerical Jet Simulations**| RAM parallel RHD code (Zhang 06)                    | None                                                                | JET Moving-Mesh RHD (Duffell 2013)              | None                                                               |
+| **Approximations**           | Spherical solution truncated at fixed opening angle | Thin blast shell                                                    |                                                 | Thin blast shell                                                   |
+| **Model Fitting**            | Deprecated                                          | Yes                                                                 | Yes                                             | Yes                                                                |
+| **Synchrotron Self-Absorption** | Yes                                              | No                                                                  | No                                              | Self-Implement                                         |
+| **Electron Cooling**         | Yes                                                 | Yes                                                                 | Yes                                             | Yes                                                                |
+| **Inverse Compton**          | No                                                  | Experimental                                                        | No                                              | No                                                                 |
+| **Wind Environment**         | Yes                                                 | No                                                                  | No                                              | Yes                                                                |
+| **Reverse Shock**            | No                                                  | No                                                                  | No                                              | No                                                                 |
+| **Energy Injection**         | No                                                  | Experimental                                                        | No                                              | No                                                                 |
+| **Coasting Phase**           | No                                                  | No                                                                  | Yes                                             | Yes                                                                |
+| **Counter-jet**              | Yes                                                 | Yes                                                                 | No                                              | Yes                                                                |
+
+*Table 2: Comparison of the models*
 
 
 # Generating lightcurves
