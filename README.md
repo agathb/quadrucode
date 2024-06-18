@@ -1,28 +1,27 @@
-This project uses four models to generate a plot of the afterglow lightcurve for specified parameers. The aim is to understand the dependencies of each model and compare them.
+This project employs four GRB afterglow models to generate lightcurves for specified parameters. The aim is to understand the dependencies of each model and compare them.
 
 # Models
+
+This code requires the installation of four GRB afterglow models described in the following, namely Boxfit, Afterglowpy, JetFit and Jetsimpy. Once the models are installed, the relevant files for each model will already be in its corresponding folder and the code should run smoothly, without requiring any other packages.
+
 ## BoxFit
 
-Described in [Hendrik van Eerten, Alexander van der Horst, and Andrew MacFadyen. Gamma-ray burst afterglow broadband fitting based directly on hydrodynamics simulations. The Astrophysical Journal, 749(1):44, mar 2012.](https://arxiv.org/abs/1110.5089), and can be downloaded [here](https://cosmo.nyu.edu/afterglowlibrary/boxfit2011.html) as well as the box files. 
+Described in [van Eerten et al. (2012)](https://arxiv.org/abs/1110.5089), the code can be downloaded [here](https://cosmo.nyu.edu/afterglowlibrary/boxfit2011.html) as well as the box files. 
 For the installation, it is recommended to follow the [user guide](https://cosmo.nyu.edu/afterglowlibrary/boxfitdatav2/boxfitguidev2.pdf) made by the author. 
-Once it is installed and has ran once, the code can readily run without moving any files. Indeed, the three necessary files are in the 'boxficode' directory, namely: 'boxfitsettings.txt' where the parameters are specified, `lightcurve.txt` the output data of boxfit when it is asked to generate a lightcurve and 'boxfit' containing the code. 
+Once it is installed and has ran once, the code can readily run without moving any files. Indeed, the three necessary files are in the `boxficode` directory, namely: `boxfitsettings.txt` where the parameters are specified, `lightcurve.txt` the output data of boxfit when it is asked to generate a lightcurve and `boxfit` containing the executable. 
 
 ## Afterglowpy
 
-Described in [Ryan, G., van Eerten, H., Piro, L. and Troja, E., 2020, Astrophysical Journal 896, 166 (2020)](https://arxiv.org/abs/1909.11691) and available on github [here](https://github.com/geoffryan/afterglowpy?tab=readme-ov-file).
-The installation is straightforward by using pip as described in its github page, and needs no specific folder.
+Described in [Ryan et al. (2020)](https://arxiv.org/abs/1909.11691) and available on GitHub [here](https://github.com/geoffryan/afterglowpy?tab=readme-ov-file).
+The installation is straightforward by using pip as described in its GitHub page, and needs no specific folder.
 
 ## JetFit
 
-Described in [Yiyang Wu and Andrew MacFadyen. Constraining the outflow structure of the binary neutron star merger event gw170817/grb170817a with a markov chain monte carlo analysis. The Astrophysical Journal, 869(1):55, December 2018](https://arxiv.org/abs/1809.06843) and the github is [here](https://github.com/NYU-CAL/JetFit), which can be set up in a conda environment. The corresponding folder 'jetfitcode' has: three .py files namely `FitterClass.py, InterpolatorClass.py, FluxGeneratorClass.py' with classes and one table 'Table.h5' of precomputed fluxes for interpolation. 
+Described in [Wu & MacFadyen (2018)](https://arxiv.org/abs/1809.06843) available on GitHub [here](https://github.com/NYU-CAL/JetFit). It can be set up in a conda environment. The corresponding folder `jetfitcode` has three .py files namely `FitterClass.py`, `InterpolatorClass.py`, `FluxGeneratorClass.py` with classes and one table `Table.h5` of precomputed fluxes for interpolation. 
 
 ## JetSimpy
 
-Described in [Hao Wang, Ranadeep G. Dastidar, Dimitrios Giannios, and Paul C. Duffell. jetsimpy:A highly efficient hydrodynamic code for gamma-ray burst afterglow, 2024](https://arxiv.org/html/2402.19359v1) and available on github [here](https://github.com/haowang-astro/jetsimpy).
-
-## Files
-
-Once all the models are installed, the relevant files for each model will already be in each folder and the code should run smoothly.
+Described in [Wang et al. (2024)](https://arxiv.org/html/2402.19359v1) and available on github [here](https://github.com/haowang-astro/jetsimpy). The installation is also straightforward by using pip as described in its GitHub page, and needs no specific folder.
 
 ## Input and units for each model
 
